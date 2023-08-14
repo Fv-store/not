@@ -2,7 +2,7 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-echo -e " [INFO] Downloading Update File"
+echo -e " [ INFO ] Downloading Update File"
 sleep 2
 
 # menu
@@ -40,7 +40,10 @@ wget -q -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Fv-store/not/
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/Fv-store/not/main/menu/restart.sh" && chmod +x /usr/bin/restart
 wget -q -O /usr/bin/bw "https://raw.githubusercontent.com/Fv-store/not/main/menu/bw.sh" && chmod +x /usr/bin/bw
 
-echo -e "Update Script Success"
+clear
+# opt
+echo -e "Update Script Success..."
 sleep 3
-read "Klik enter untuk kembali ke menu"
-esac
+read -n 1 -s -r -p "Klik tombol apa saja untuk ke menu"
+menu
+fi
