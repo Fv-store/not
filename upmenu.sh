@@ -35,20 +35,7 @@ wget -O auto-reboot "https://raw.githubusercontent.com/Fv-store/not/main/menu/au
 wget -O restart "https://raw.githubusercontent.com/Fv-store/not/main/menu/restart.sh"
 wget -O bw "https://raw.githubusercontent.com/Fv-store/not/main/menu/bw.sh"
 
-# menu & exit
-# color
-biru='\e[96m'
-kuning='\e[93m'
-putih='\e[97m'
-xy='\e[0m'
-clear
-echo -e " ${biru}[${xy}""${putih}01${xy}""${biru}}${xy}""${biru} Menu ${xy}"
-echo -e " ${biru}[${xy}""${putih}02${xy}""${biru}}${xy}""${biru} Menu Settings ${xy}"
-echo -e " ${biru}[${xy}""${putih}x${xy}""${biru}}${xy}""${biru} to exit ${xy}"
-echo -e "\e[97m"
-read -p "Select From Options [ 1 - 2 ] --> : "  opt
-case $opt in
-1 | 01) clear ; menu ;;
-2 | 02) clear ; menu-set ;;
-x) exit ;;
+echo -e "Update Script Success"
+sleep 3
+read "Klik enter untuk kembali ke menu"
 esac
