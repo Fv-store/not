@@ -25,7 +25,8 @@ ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
 # install udp
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
-
+# update script
+upmenu="wget -q -O /usr/bin/upmenu "https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh" && upmenu"
 clear 
 figlet 'FV STORE' | lolcat
 echo -e "${CY}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
@@ -67,7 +68,7 @@ case $opt in
 10) clear ; menu-webmin ; exit ;; 
 11) clear ; running ;;
 12) clear ; clearcache ;;
-13) clear ; wget -q -O /usr/bin/upmenu "https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh" && upmenu ;;
+13) clear ; ${upmenu} ;;
 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 0 | 00) clear ; menu ; exit ;;
 x) exit ;;
