@@ -1,6 +1,4 @@
 #!/bin/bash
-# Auto Script Premium By FV STORE
-# ==============================
 # Color
 DF='\e[39m'
 Bold='\e[1m'
@@ -23,7 +21,6 @@ GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
-AHSU="https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh"
 clear 
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m               ✯ MENU SETTINGS ✯              \E[0m"
@@ -58,7 +55,7 @@ case $opt in
 10) clear ; menu-webmin ; exit ;; 
 11) clear ; running ;;
 12) clear ; clearcache ;;
-13) clear ; "${AHSU} && chmod +x upmenu && ./upmenu ;;
+13) clear ; wget https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh && chmod +x upmenu.sh && ./upmenu.sh && rm -f /root/upmenu.sh ;;
 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 00 | 0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
