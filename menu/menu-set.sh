@@ -44,7 +44,7 @@ echo -e "${CYAN}[${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Cache\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\e[93m Keluar dari menu settings\e[0m"
-echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p "Select From Options [ 1 - 13 ] --> : " opt
 case $opt in
 01 | 1) clear ; menu-domain ; exit ;;
@@ -59,7 +59,7 @@ case $opt in
 10 | 10) clear ; menu-webmin ; exit ;; 
 11 | 11) clear ; running ;;
 12 | 12) clear ; clearcache ;;
-13 | 13) clear ; wget "${AHSU}" && chmod +x upmenu.sh && ./upmenu.sh ;;
+13 | 13) clear ; "${AHSU}" && chmod +x upmenu.sh && ./upmenu.sh ;;
 14 | 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 00 | 0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
