@@ -1,7 +1,6 @@
 #!/bin/bash
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-
+# Auto Script Premium By FV STORE
+# ==============================
 # Color
 DF='\e[39m'
 Bold='\e[1m'
@@ -23,14 +22,12 @@ NC='\e[0m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
-# install udp
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
+fdlyvpn="https://raw.githubusercontent.com/Fv-store/not/main/"
 clear 
-figlet 'FV STORE' | lolcat
-echo -e "${CY}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
-echo -e "\E[44;1;39m                ✯ MENU SETTINGS ✯              \E[0m"
-echo -e "${CY}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
-echo -e ""
+echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m               ✯ MENU SETTINGS ✯             \E[0m"
+echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${CYAN}[${NC}""\e[97m01\e[0m""${CYAN}]${NC}""\e[96m Ganti Domain VPS\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m02\e[0m""${CYAN}]${NC}""\e[96m Ganti Banner VPS\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m03\e[0m""${CYAN}]${NC}""\e[96m Ganti Password VPS\e[0m"
@@ -49,26 +46,23 @@ echo -e "${CYAN}[${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\e[93m Keluar dari menu se
 echo ""
 echo -e "Press x or [ Ctrl+C ] • To-Exit"
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e ""
-echo -e ""
 read -p "Select From Options [ 1 - 13 ] --> : " opt
-echo -e ""
 case $opt in
-1 | 01) clear ; menu-domain ; exit ;;
-2 | 02) clear ; nano /etc/issue.net ; exit ;; #ssh-vpn banner.conf
-3 | 03) clear ; passwd ;;
-4 | 04) clear ; port-change ; exit ;;
-5 | 05) clear ; about ; exit ;;
-6 | 06) clear ; auto-reboot ; exit ;;
-7 | 07) clear ; restart ; exit ;;
-8 | 08) clear ; speedtest ; exit ;;
-9 | 09) clear ; bw ; exit ;;
-10) clear ; menu-webmin ; exit ;; 
-11) clear ; running ;;
-12) clear ; clearcache ;;
-13) clear ; wget -q -O /usr/bin/upmenu "https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh" && upmenu ;;
-14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-0 | 00) clear ; menu ; exit ;;
+01 | 1) clear ; menu-domain ; exit ;;
+02 | 2) clear ; nano /etc/issue.net ; exit ;; #ssh-vpn banner.conf
+03 | 3) clear ; passwd ;;
+04 | 4) clear ; port-change ; exit ;;
+05 | 5) clear ; about ; exit ;;
+06 | 6) clear ; auto-reboot ; exit ;;
+07 | 7) clear ; restart ; exit ;;
+08 | 8) clear ; speedtest ; exit ;;
+09 | 09) clear ; bw ; exit ;;
+10 | 10) clear ; menu-webmin ; exit ;; 
+11 | 11) clear ; running ;;
+12 | 12) clear ; clearcache ;;
+13 | 13) clear ; wget ${fdlyvpn} && chmod +x upmenu.sh && ./upmenu.sh ;;
+14 | 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+00 | 0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo -e "" ; echo "Anda Salah Memilih Menu" ; sleep 1 ; menu-set ;;
+*) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
 esac 
