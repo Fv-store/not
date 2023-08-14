@@ -69,16 +69,15 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${tyblue}NOTES${NC} ] 3. apt dist-upgrade -y"
   sleep 1
   echo -e "[ ${tyblue}NOTES${NC} ] 4. reboot"
-  sleep 1
+  sleep 2
   echo ""
-  sleep 1
+  sleep 2
   echo -e "[ ${tyblue}NOTES${NC} ] After rebooting"
-  sleep 1
   echo -e "[ ${tyblue}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${tyblue}NOTES${NC} ] if you understand then tap enter now"
+  echo -e "[ ${tyblue}NOTES${NC} ] Lu ngerti ga ngerti klik enter woy 🗿"
   read
 else
-  echo -e "[ ${green}INFO${NC} ] Oke installed"
+  echo -e "[ ${green}INFO${NC} ] Oke Mbut"
 fi
 
 ttet=`uname -r`
@@ -125,7 +124,7 @@ mkdir -p /var/lib/SIJA >/dev/null 2>&1
 echo "IP=" >> /var/lib/SIJA/ipvps.conf
 
 echo ""
-wget -q https://raw.githubusercontent.com/FadlyNotNot/xray/main/tools.sh;chmod +x tools.sh;./tools.sh
+wget -q https://raw.githubusercontent.com/Fv-store/not/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 yellow "Add Domain for vmess/vless/trojan dll"
@@ -146,14 +145,14 @@ read -rp "Input ur domain : " -e pp
     
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSH / WS               $NC"
+echo -e "$green      Installing SSH WS                 $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Fv-store/not/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green          Install XRAY              $NC"
+echo -e "$green          Installing XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
@@ -196,7 +195,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ By FV STORE ]-===================="
+echo "=====================-[ Fv Store Tunnel ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -236,7 +235,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ By FV STORE ]-==============="
+echo "===============-[ Fv Store Tunnel ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
@@ -253,3 +252,8 @@ exit 0
 else
 reboot
 fi
+
+
+
+
+
