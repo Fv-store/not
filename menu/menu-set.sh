@@ -54,7 +54,7 @@ case $opt in
 06 | 6) clear ; auto-reboot ; exit ;;
 07 | 7) clear ; restart ; exit ;;
 08 | 8) clear ; speedtest ; exit ;;
-09 | 09) clear ; bw ; exit ;;
+09 | 9) clear ; bw ; exit ;;
 10) clear ; menu-webmin ; exit ;; 
 11) clear ; running ;;
 12) clear ; clearcache ;;
