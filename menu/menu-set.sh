@@ -23,10 +23,11 @@ GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
-fdlyvpn="https://raw.githubusercontent.com/Fv-store/not/main/"
+fdlyvpn="https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh"
 clear 
+figlet 'FV STORE' | lolcat
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m               ✯ MENU SETTINGS ✯             \E[0m"
+echo -e "\E[44;1;39m               ✯ MENU SETTINGS ✯              \E[0m"
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${CYAN}[${NC}""\e[97m01\e[0m""${CYAN}]${NC}""\e[96m Ganti Domain VPS\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m02\e[0m""${CYAN}]${NC}""\e[96m Ganti Banner VPS\e[0m"
@@ -43,8 +44,6 @@ echo -e "${CYAN}[${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Cache\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\e[93m Keluar dari menu settings\e[0m"
-echo ""
-echo -e "Press x or [ Ctrl+C ] • To-Exit"
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p "Select From Options [ 1 - 13 ] --> : " opt
 case $opt in
@@ -60,7 +59,7 @@ case $opt in
 10 | 10) clear ; menu-webmin ; exit ;; 
 11 | 11) clear ; running ;;
 12 | 12) clear ; clearcache ;;
-13 | 13) clear ; wget ${fdlyvpn} && chmod +x upmenu.sh && ./upmenu.sh ;;
+13 | 13) clear ; wget -q -O /usr/bin/upmenu "${fdlyvpn}" && chmod +x /usr/bin/upmenu && upmenu
 14 | 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 00 | 0) clear ; menu ; exit ;;
 x) exit ;;
