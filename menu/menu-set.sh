@@ -56,11 +56,11 @@ case $opt in
 07 | 7) clear ; restart ; exit ;;
 08 | 8) clear ; speedtest ; exit ;;
 09 | 09) clear ; bw ; exit ;;
-10 | 10) clear ; menu-webmin ; exit ;; 
-11 | 11) clear ; running ;;
-12 | 12) clear ; clearcache ;;
-13 | 13) clear ; "${AHSU} && chmod +x upmenu && ./upmenu ;;
-14 | 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+10) clear ; menu-webmin ; exit ;; 
+11) clear ; running ;;
+12) clear ; clearcache ;;
+13) clear ; "${AHSU} && chmod +x upmenu && ./upmenu ;;
+14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 00 | 0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
 esac 
