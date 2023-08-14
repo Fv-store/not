@@ -23,7 +23,7 @@ GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
-fdlyvpn="https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh"
+AHSU="https://raw.githubusercontent.com/Fv-store/not/main/"
 clear 
 figlet 'FV STORE' | lolcat
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -59,9 +59,8 @@ case $opt in
 10 | 10) clear ; menu-webmin ; exit ;; 
 11 | 11) clear ; running ;;
 12 | 12) clear ; clearcache ;;
-13 | 13) clear ; wget -q -O /usr/bin/upmenu "${fdlyvpn}" && chmod +x /usr/bin/upmenu && upmenu
+13 | 13) clear ; wget "${AHSU}" && chmod +x upmenu.sh && ./upmenu.sh ;;
 14 | 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 00 | 0) clear ; menu ; exit ;;
-x) exit ;;
 *) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
 esac 
