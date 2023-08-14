@@ -324,7 +324,7 @@ chmod +x running
 chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
-chmod +x updatemenu
+chmod +x upmenu
 
 chmod +x menu-ssh
 chmod +x usernew
