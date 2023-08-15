@@ -17,8 +17,6 @@ BURIQ () {
     rm -f /root/tmp
 }
 
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
@@ -41,12 +39,10 @@ PERMISSION () {
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
-    res="Permission Denied!"
+    res="Blm Izin Lu Ama gw 🗿"
     fi
     BURIQ
 }
-COLOR1='\033[0;33m'
-COLOR2='\033[0;39m'
 red='\e[1;31m'
 green='\e[1;32m'
 NC='\e[0m'
@@ -59,7 +55,10 @@ Exp="\e[36mExpired\033[0m"
 else
 Exp=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep $MYIP | awk '{print $3}')
 fi
-
+####
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo "Script By FV STORES"
+#########################
 
 # Color Validation
 DF='\e[39m'
@@ -211,8 +210,8 @@ echo -e "  ${LIGHT}• ${CYAN}Current Domain      ${NC}=${BIGreen} $( cat /etc/x
 echo -e "  ${LIGHT}• ${CYAN}Server IP           ${NC}=${BIGreen} $IPVPS"
 echo -e "  ${LIGHT}• ${CYAN}ISP-VPS             ${NC}=${BIGreen} $ISP"
 echo -e "  ${LIGHT}• ${CYAN}City                ${NC}=${BIGreen} $CITY"
-echo -e "  ${LIGHT}• ${CYAN}Clients Name        ${NC}=${BIYellow} $Name"
-echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}=${BIYellow} $Exp"
+echo -e "  ${LIGHT}• ${CYAN}Clients Name        ${NC}""${BIYellow} $Name"
+echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}""${BIYellow} $Exp"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "                     << STATUS SERVICE >>                    \E[0m" | lolcat    
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
