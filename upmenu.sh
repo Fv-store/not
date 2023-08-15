@@ -7,6 +7,7 @@ sleep 2
 
 # menu x-ray
 # vmess
+cd
 wget -O /usr/bin/add-ws "https://raw.githubusercontent.com/Fv-store/not/main/xray/add-ws.sh" && chmod +x /user/bin/add-ws
 wget -O /usr/bin/trialvmess "https://raw.githubusercontent.com/Fv-store/not/main/xray/trialvmess.sh" && chmod +x /user/bin/trialvmess
 wget -O /usr/bin/renew-ws "https://raw.githubusercontent.com/Fv-store/not/main/xray/renew-ws.sh" && chmod +x /user/bin/renew-ws
@@ -72,7 +73,12 @@ wget -q -O /usr/bin/bw "https://raw.githubusercontent.com/Fv-store/not/main/menu
 clear
 # opt
 echo -e "Update Script Success..."
-sleep 3
-read -n 1 -s -r -p "Klik tombol apa saja untuk ke menu"
+sleep 1
+echo -e "Kembali ke menu dalam 3 detik"
+sleep 1
+echo -e "1..."
+sleep 1
+echo -e "2..."
+sleep 1
+echo -e "3..."
 menu
-fi
