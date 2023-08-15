@@ -164,16 +164,17 @@ clear
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}                     << INFORMASI VPS >>                    \E[0m" | lolcat    
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "${CYAN}│${NC}""${LWHITE} Cpu Usage${NC}""     : $cpu_usage "
-echo -e "${CYAN}│${NC}""${LWHITE} Total RAM${NC}""     : $tram MB   "
-echo -e "${CYAN}│${NC}""${LWHITE} ISP vps${NC}""       : $ISP       "
-echo -e "${CYAN}│${NC}""${LWHITE} Region${NC}""        : $CITY      "
-echo -e "${CYAN}│${NC}""${LWHITE} IP vps${NC}""        : $IPVPS     "
-echo -e "${CYAN}│${NC}""${LWHITE} Domain vps${NC}""    : $domain    "
-echo -e "${CYAN}│${NC}""${LWHITE} Server uptime${NC}"" : $uptime    "
-echo -e "${CYAN}│${NC}""${LWHITE} Durasi script${NC}"" : $exp2 Hari"
-echo -e "${CYAN}│${NC}""${LWHITE} Exp script   ${NC}"" : $exp"
-echo -e "${CYAN}│${NC}""${LWHITE} Order script ${NC}"" : $Name"
+echo -e "${CYAN} ${NC}""${LWHITE} Cpu Usage${NC}""       : $cpu_usage "
+echo -e "${CYAN} ${NC}""${LWHITE} Total RAM${NC}""       : $tram MB   "
+echo -e "${CYAN} ${NC}""${LWHITE} Operating System${NC}"": ${NC}=${BIGreen} $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g')( $(uname -m))"
+echo -e "${CYAN} ${NC}""${LWHITE} ISP vps${NC}""         : $ISP       "
+echo -e "${CYAN} ${NC}""${LWHITE} Region${NC}""          : $CITY      "
+echo -e "${CYAN} ${NC}""${LWHITE} IP vps${NC}""          : $IPVPS     "
+echo -e "${CYAN} ${NC}""${LWHITE} Domain vps${NC}""      : $domain    "
+echo -e "${CYAN} ${NC}""${LWHITE} Server uptime${NC}""   : $uptime    "
+echo -e "${CYAN} ${NC}""${LWHITE} Durasi script${NC}""   : $exp2 Hari"
+echo -e "${CYAN} ${NC}""${LWHITE} Exp script   ${NC}""   : $exp"
+echo -e "${CYAN} ${NC}""${LWHITE} Order script ${NC}""   : $Name"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}                     << STATUS SERVICE >>                    ${NC}" | lolcat    
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
@@ -185,13 +186,13 @@ echo -e "${CYAN}└────────────────────�
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}                     << MENU TUNNELING >>                    ${NC}" | lolcat    
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "${CYAN}│ ${NC}""\e[97m1.\e[0m""${CY}SSH & OVPN ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m4.\e[0m""${CY}TROJAN GO ${NC}""${BIYellow}[MENU]${NC}"
-echo -e "${CYAN}│ ${NC}""\e[97m2.\e[0m""${CY}VMESS      ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m5.\e[0m""${CY}TROJAN WS ${NC}""${BIYellow}[MENU]${NC}"
-echo -e "${CYAN}│ ${NC}""\e[97m3.\e[0m""${CY}VLESS      ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m6.\e[0m""${CY}SETTING   ${NC}""${BIYellow}[MENU]${NC}"
+echo -e "${CYAN}  ${NC}""\e[97m1.\e[0m""${CY}SSH & OVPN ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m4.\e[0m""${CY}TROJAN GO ${NC}""${BIYellow}[MENU]${NC}"
+echo -e "${CYAN}  ${NC}""\e[97m2.\e[0m""${CY}VMESS      ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m5.\e[0m""${CY}TROJAN WS ${NC}""${BIYellow}[MENU]${NC}"
+echo -e "${CYAN}  ${NC}""\e[97m3.\e[0m""${CY}VLESS      ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m6.\e[0m""${CY}SETTING   ${NC}""${BIYellow}[MENU]${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}              << SCRIPT BY FV STORE TUNNELING >>              ${NC}" | lolcat
-echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-read -p " ${LWHITE}Select From Options [ 1 - 6 ] --> : "  opt
+echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}""${LWHITE}
+read -p " Select From Options [ 1 - 6 ] --> : "  opt
 case $opt in
 1) clear ; menu-ssh ;;
 2) clear ; menu-vmess ;;
