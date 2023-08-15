@@ -171,29 +171,27 @@ echo -e "${CYAN}│${NC}""${LWHITE} Region${NC}""        : $CITY      "
 echo -e "${CYAN}│${NC}""${LWHITE} IP vps${NC}""        : $IPVPS     "
 echo -e "${CYAN}│${NC}""${LWHITE} Domain vps${NC}""    : $domain    "
 echo -e "${CYAN}│${NC}""${LWHITE} Server uptime${NC}"" : $uptime    "
-echo -e "${CYAN}│${NC}""${LWHITE} Date${NC}""          : $DATE      "
 echo -e "${CYAN}│${NC}""${LWHITE} Durasi script${NC}"" : $exp2 Hari"
 echo -e "${CYAN}│${NC}""${LWHITE} Exp script   ${NC}"" : $exp"
 echo -e "${CYAN}│${NC}""${LWHITE} Order script ${NC}"" : $Name"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}                     << STATUS SERVICE >>                    \E[0m" | lolcat    
+echo -e "${BIYellow}                     << STATUS SERVICE >>                    ${NC}" | lolcat    
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "      ${BIGreen}[ SSH Websocket${NC}: ${status_ws_epro} ] [ NGINX: ${status_nginx} ] [ XRAY: ${status_ss} ]"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN        ${CYAN}│"
-echo -e "${CYAN}│  \033[0m ${LIGHT} $ssh1        $vma           $vla          $tra      ${CYAN}│"
-echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}""
+echo -e "${CYAN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN   ${NC}"
+echo -e "${CYAN}│  \033[0m ${LIGHT} $ssh1        $vma           $vla          $tra ${NC}"
+echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}                     << MENU TUNNELING >>                    \E[0m" | lolcat    
+echo -e "${BIYellow}                     << MENU TUNNELING >>                    ${NC}" | lolcat    
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${CYAN}│ ${NC}""\e[97m1.\e[0m""${CY}SSH & OVPN ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m4.\e[0m""${CY}TROJAN GO ${NC}""${BIYellow}[MENU]${NC}"
 echo -e "${CYAN}│ ${NC}""\e[97m2.\e[0m""${CY}VMESS      ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m5.\e[0m""${CY}TROJAN WS ${NC}""${BIYellow}[MENU]${NC}"
 echo -e "${CYAN}│ ${NC}""\e[97m3.\e[0m""${CY}VLESS      ${NC}""${BIYellow}[MENU]     ${NC}""\e[97m6.\e[0m""${CY}SETTING   ${NC}""${BIYellow}[MENU]${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}              << SCRIPT BY FV STORE TUNNELING >>              \E[0m" | lolcat
+echo -e "${BIYellow}              << SCRIPT BY FV STORE TUNNELING >>              ${NC}" | lolcat
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "${LWHITE}"
-read -p " Select From Options [ 1 - 6 ] --> : "  opt
+read -p " ${LWHITE}Select From Options [ 1 - 6 ] --> : "  opt
 case $opt in
 1) clear ; menu-ssh ;;
 2) clear ; menu-vmess ;;
