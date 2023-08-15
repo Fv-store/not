@@ -56,7 +56,7 @@ case $opt in
 10) clear ; menu-webmin ; exit ;; 
 11) clear ; running ;;
 12) clear ; clearcache ;;
-13) clear ; wget https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh && chmod +x upmenu.sh && ./upmenu.sh && rm -f /root/upmenu.sh ;;
+13) clear ; wget -O /usr/bin/upmenu "https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh" && chmod +x /usr/bin/upmenu && upmenu ;;
 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 15) clear ; wget https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 
