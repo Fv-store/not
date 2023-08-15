@@ -210,8 +210,8 @@ echo -e "  ${LIGHT}• ${CYAN}Current Domain      ${NC}=${BIGreen} $( cat /etc/x
 echo -e "  ${LIGHT}• ${CYAN}Server IP           ${NC}=${BIGreen} $IPVPS"
 echo -e "  ${LIGHT}• ${CYAN}ISP-VPS             ${NC}=${BIGreen} $ISP"
 echo -e "  ${LIGHT}• ${CYAN}City                ${NC}=${BIGreen} $CITY"
-echo -e "  ${LIGHT}• ${CYAN}Clients Name        ${NC}""${BIYellow} $Name"
-echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}""${BIYellow} $Exp"
+echo -e "  ${LIGHT}• ${CYAN}Clients Name        ${NC}=${BIYellow} $Name"
+echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}=${BIYellow} $Exp"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "                     << STATUS SERVICE >>                    \E[0m" | lolcat    
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
