@@ -39,6 +39,7 @@ echo -e "${CYAN}[${NC}""\e[97m11\e[0m""${CYAN}]${NC}""\e[96m Status Service\e[0m
 echo -e "${CYAN}[${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Cache\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
+echo -e "${CYAN}[${NC}""\e[97m15\e[0m""${CYAN}]${NC}""\e[96m Menu Bot\e[0m"
 echo -e "${CYAN}[${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\e[93m Keluar dari menu settings\e[0m"
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p "Select From Options [ 1 - 13 ] --> : " opt
@@ -57,6 +58,8 @@ case $opt in
 12) clear ; clearcache ;;
 13) clear ; wget https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh && chmod +x upmenu.sh && ./upmenu.sh && rm -f /root/upmenu.sh ;;
 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
+15) clear ; wget https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
+
 00 | 0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
 esac 
