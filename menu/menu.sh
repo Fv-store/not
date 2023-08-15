@@ -7,8 +7,8 @@ BURIQ () {
     exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
     d1=(`date -d "$exp" +%s`)
     d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
+    expd=$(( (d1 - d2) / 86400 ))
+    if [[ "$expd" -le "0" ]]; then
     echo $user > /etc/.$user.ini
     else
     rm -f /etc/.$user.ini > /dev/null 2>&1
@@ -18,13 +18,13 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep $MYIP | awk '{print $2}')
-echo $Name > /usr/local/etc/.$Name.ini
-CekOne=$(cat /usr/local/etc/.$Name.ini)
+Names=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep $MYIP | awk '{print $2}')
+echo $Names > /usr/local/etc/.$Names.ini
+CekOne=$(cat /usr/local/etc/.$Names.ini)
 
 Bloman () {
-if [ -f "/etc/.$Name.ini" ]; then
-CekTwo=$(cat /etc/.$Name.ini)
+if [ -f "/etc/.$Names.ini" ]; then
+CekTwo=$(cat /etc/.$Names.ini)
     if [ "$CekOne" = "$CekTwo" ]; then
         res="Expired"
     fi
@@ -51,13 +51,12 @@ red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 PERMISSION
 
 if [ "$res" = "Expired" ]; then
-Exp="\e[36mExpired\033[0m"
+Expt="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep $MYIP | awk '{print $3}')
+Expt=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep $MYIP | awk '{print $3}')
 fi
 ####
 MYIP=$(curl -sS ipv4.icanhazip.com)
-echo "Script By FV STORES"
 #########################
 
 # Color Validation
@@ -211,8 +210,8 @@ echo -e "  ${LIGHT}• ${CYAN}Server IP           ${NC}=${BIGreen} $IPVPS"
 echo -e "  ${LIGHT}• ${CYAN}ISP-VPS             ${NC}=${BIGreen} $ISP"
 echo -e "  ${LIGHT}• ${CYAN}City                ${NC}=${BIGreen} $CITY"
 echo -e "  ${LIGHT}• ${CYAN}Clients Name        ${NC}=${BIYellow} $Name"
-echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}=${BIYellow} $Exp"
-echo -e "  ${LIGHT}• ${CYAN}Durasi Expired      ${NC}=${BIYellow} $Exp2 Hari"
+echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}=${BIYellow} $Expt"
+echo -e "  ${LIGHT}• ${CYAN}Durasi Expired      ${NC}=${BIYellow} $Expd Hari"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "                     << STATUS SERVICE >>                    \E[0m" | lolcat    
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
