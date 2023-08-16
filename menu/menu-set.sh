@@ -29,7 +29,6 @@ UPDATE="https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh"
 BOT="https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh"
 # ====================================
 clear 
-figlet 'FV STORE' | lolcat
 echo -e "${BCY}┌─────────────────────────────────────────┐${NC}" 
 echo -e "\E[44;0;37m             ✯ MENU SETTINGS ✯            \E[0m" 
 echo -e "${BCY}└─────────────────────────────────────────┘${NC}"
@@ -49,7 +48,7 @@ echo -e "${BCY}│${CYAN}  [${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Ca
 echo -e "${BCY}│${CYAN}  [${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m" 
 echo -e "${BCY}│${CYAN}  [${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
 echo -e "${BCY}│${CYAN}  [${NC}""\e[97m15\e[0m""${CYAN}]${NC}""\e[96m Menu Bot\e[0m"
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\e[33m Keluar dari menu settings\e[0m" 
+echo -e "${BCY}│${CYAN}  [${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\033[1;33m Keluar dari menu settings\e[0m" 
 echo -e "${BCY}└─────────────────────────────────────────┘${NC}"
 echo -e "${LWHITE}"
 read -p "Select Menu  << 1 - 13 >> : " opt
