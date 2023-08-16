@@ -1,4 +1,5 @@
 #!/bin/bash
+# ==================
 # Color
 DF='\e[39m'
 Bold='\e[1m'
@@ -20,7 +21,11 @@ NC='\e[0m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
+# ==================
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
+UPDATE="https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh"
+BOT="https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh"
+# ==================
 clear 
 figlet 'FV STORE' | lolcat
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}" 
@@ -57,9 +62,9 @@ case $opt in
 10) clear ; menu-webmin ; exit ;; 
 11) clear ; running ;;
 12) clear ; clearcache ;;
-13) clear ; wget -O /usr/bin/upmenu "https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh" && chmod +x /usr/bin/upmenu && upmenu ;;
+13) clear ; wget -O /usr/bin/upmenu "${UPDATE}" && chmod +x /usr/bin/upmenu && upmenu ;;
 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-15) clear ; wget https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
+15) clear ; wget ${BOT} && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 
 00 | 0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
