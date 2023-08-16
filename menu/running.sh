@@ -107,110 +107,110 @@ clear
 
 # STATUS SERVICE OPENVPN
 if [[ $oovpn == "active" ]]; then
-  status_openvpn=" ${GREEN}Running ${NC}( No Error )"
+  status_openvpn=" ${GREEN}Running ${NC}( On )"
 else
-  status_openvpn="${RED}  Not Running ${NC}  ( Error )"
+  status_openvpn="${RED}  Not Running ${NC}  ( Off )"
 fi
 
 # STATUS SERVICE  SSH 
 if [[ $ssh_service == "running" ]]; then 
-   status_ssh=" ${GREEN}Running ${NC}( No Error )"
+   status_ssh=" ${GREEN}Running ${NC}( On )"
 else
-   status_ssh="${RED}  Not Running ${NC}  ( Error )"
+   status_ssh="${RED}  Not Running ${NC}  ( Off )"
 fi
 
 # STATUS SERVICE  SQUID 
 if [[ $squid_service == "running" ]]; then 
-   status_squid=" ${GREEN}Running ${NC}( No Error )"
+   status_squid=" ${GREEN}Running ${NC}( On )"
 else
-   status_squid="${RED}  Not Running ${NC}  ( Error )"
+   status_squid="${RED}  Not Running ${NC}  ( Off )"
 fi
 
 # STATUS SERVICE  VNSTAT 
 if [[ $vnstat_service == "running" ]]; then 
-   status_vnstat=" ${GREEN}Running ${NC}( No Error )"
+   status_vnstat=" ${GREEN}Running ${NC}( On )"
 else
-   status_vnstat="${RED}  Not Running ${NC}  ( Error )"
+   status_vnstat="${RED}  Not Running ${NC}  ( Off )"
 fi
 
 # STATUS SERVICE  CRONS 
 if [[ $cron_service == "running" ]]; then 
-   status_cron=" ${GREEN}Running ${NC}( No Error )"
+   status_cron=" ${GREEN}Running ${NC}( On )"
 else
-   status_cron="${RED}  Not Running ${NC}  ( Error )"
+   status_cron="${RED}  Not Running ${NC}  ( Off )"
 fi
 
 # STATUS SERVICE  FAIL2BAN 
 if [[ $fail2ban_service == "running" ]]; then 
-   status_fail2ban=" ${GREEN}Running ${NC}( No Error )"
+   status_fail2ban=" ${GREEN}Running ${NC}( On )"
 else
-   status_fail2ban="${RED}  Not Running ${NC}  ( Error )"
+   status_fail2ban="${RED}  Not Running ${NC}  ( Off )"
 fi
 
 # STATUS SERVICE  TLS 
 if [[ $tls_v2ray_status == "running" ]]; then 
-   status_tls_v2ray=" ${GREEN}Running${NC} ( No Error )"
+   status_tls_v2ray=" ${GREEN}Running${NC} ( On )"
 else
-   status_tls_v2ray="${RED}  Not Running${NC}   ( Error )"
+   status_tls_v2ray="${RED}  Not Running${NC}   ( Off )"
 fi
 
 # STATUS SERVICE NON TLS V2RAY
 if [[ $nontls_v2ray_status == "running" ]]; then 
-   status_nontls_v2ray=" ${GREEN}Running ${NC}( No Error )${NC}"
+   status_nontls_v2ray=" ${GREEN}Running ${NC}( On )${NC}"
 else
-   status_nontls_v2ray="${RED}  Not Running ${NC}  ( Error )${NC}"
+   status_nontls_v2ray="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 
 # STATUS SERVICE VLESS HTTPS
 if [[ $vless_tls_v2ray_status == "running" ]]; then
-  status_tls_vless=" ${GREEN}Running${NC} ( No Error )"
+  status_tls_vless=" ${GREEN}Running${NC} ( On )"
 else
-  status_tls_vless="${RED}  Not Running ${NC}  ( Error )${NC}"
+  status_tls_vless="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 
 # STATUS SERVICE VLESS HTTP
 if [[ $vless_nontls_v2ray_status == "running" ]]; then
-  status_nontls_vless=" ${GREEN}Running${NC} ( No Error )"
+  status_nontls_vless=" ${GREEN}Running${NC} ( On )"
 else
-  status_nontls_vless="${RED}  Not Running ${NC}  ( Error )${NC}"
+  status_nontls_vless="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 # STATUS SERVICE TROJAN
 if [[ $trojan_server == "running" ]]; then 
-   status_virus_trojan=" ${GREEN}Running ${NC}( No Error )${NC}"
+   status_virus_trojan=" ${GREEN}Running ${NC}( On )${NC}"
 else
-   status_virus_trojan="${RED}  Not Running ${NC}  ( Error )${NC}"
+   status_virus_trojan="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 # Status Service Trojan GO
 if [[ $strgo == "active" ]]; then
-  status_trgo=" ${GREEN}Running ${NC}( No Error )${NC}"
+  status_trgo=" ${GREEN}Running ${NC}( On )${NC}"
 else
-  status_trgo="${RED}  Not Running ${NC}  ( Error )${NC}"
+  status_trgo="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 # STATUS SERVICE DROPBEAR
 if [[ $dropbear_status == "running" ]]; then 
-   status_beruangjatuh=" ${GREEN}Running${NC} ( No Error )${NC}"
+   status_beruangjatuh=" ${GREEN}Running${NC} ( On )${NC}"
 else
-   status_beruangjatuh="${RED}  Not Running ${NC}  ( Error )${NC}"
+   status_beruangjatuh="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 
 # STATUS SERVICE STUNNEL
 if [[ $stunnel_service == "running" ]]; then 
-   status_stunnel=" ${GREEN}Running ${NC}( No Error )"
+   status_stunnel=" ${GREEN}Running ${NC}( On )"
 else
-   status_stunnel="${RED}  Not Running ${NC}  ( Error )}"
+   status_stunnel="${RED}  Not Running ${NC}  ( Off )}"
 fi
 # STATUS SERVICE WEBSOCKET TLS
 if [[ $wstls == "running" ]]; then 
-   swstls=" ${GREEN}Running ${NC}( No Error )${NC}"
+   swstls=" ${GREEN}Running ${NC}( On )${NC}"
 else
-   swstls="${RED}  Not Running ${NC}  ( Error )${NC}"
+   swstls="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 
 # STATUS SERVICE WEBSOCKET DROPBEAR
 if [[ $wsdrop == "running" ]]; then 
-   swsdrop=" ${GREEN}Running ${NC}( No Error )${NC}"
+   swsdrop=" ${GREEN}Running ${NC}( On )${NC}"
 else
-   swsdrop="${RED}  Not Running ${NC}  ( Error )${NC}"
+   swsdrop="${RED}  Not Running ${NC}  ( Off )${NC}"
 fi
 
 
@@ -252,15 +252,15 @@ echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m              ⇱ Informasi Sytem ⇲             \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "❇️ Hostname    : $HOSTNAME"
-echo -e "❇️ Nama OS     : $Tipe"
-# echo -e "Processor   : $tipeprosesor"
-# echo -e "Proc Core   :$totalcore"
-# echo -e "Virtual     :$typevps"
-# echo -e "Cpu Usage   :$cpu_usage"
-echo -e "❇️ Total RAM   : ${totalram}MB"
-echo -e "❇️ Public IP   : $MYIP"
-echo -e "❇️ Domain      : $Domen"
+echo -e "❇️ Hostname  : $HOSTNAME"
+echo -e "❇️ Os Name   : $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
+# echo -e "Processor  : $tipeprosesor"
+# echo -e "Proc Core  : $totalcore"
+# echo -e "Virtual    : $typevps"
+# echo -e "Cpu Usage  : $cpu_usage"
+echo -e "❇️ Total RAM : ${totalram}MB"
+echo -e "❇️ Public IP : $MYIP"
+echo -e "❇️ Domain    : $Domen"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m          ⇱ Subscription Information ⇲          \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
