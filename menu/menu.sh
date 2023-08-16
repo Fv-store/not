@@ -198,17 +198,17 @@ echo -e "${BICyan} │  \033[0m ${BOLD}${GREEN}   ${BIYellow} SSH${GREEN}       
 echo -e "${BICyan} │  \033[0m ${Blue}     $ssh1         $vma           $vla           $tra              $NC"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  ${BICyan}[${BIWhite}01${BICyan}] SSH   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""     ${BICyan}[${BIWhite}04${BICyan}] TROJAN GO ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}  │"
-echo -e " ${BICyan}│  ${BICyan}[${BIWhite}02${BICyan}] VMESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""     ${BICyan}[${BIWhite}05${BICyan}] TROJAN WS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}  │"
-echo -e " ${BICyan}│  ${BICyan}[${BIWhite}03${BICyan}] VLESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""     ${BICyan}[${BIWhite}06${BICyan}] SETTINGS  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}  │"
+echo -e " ${BICyan}│  ${BICyan}[${BIWhite}01${BICyan}] SSH   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""     ${BICyan}[${BIWhite}04${BICyan}] TROJAN GO ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
+echo -e " ${BICyan}│  ${BICyan}[${BIWhite}02${BICyan}] VMESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""     ${BICyan}[${BIWhite}05${BICyan}] TROJAN WS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
+echo -e " ${BICyan}│  ${BICyan}[${BIWhite}03${BICyan}] VLESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""     ${BICyan}[${BIWhite}06${BICyan}] SETTINGS  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
 echo -e " ${BICyan}│  Version      ${NC} : Ver3. Last Update"
 echo -e " ${BICyan}│  User       ${NC}   :\033[1;36m $Name \e[0m"
 echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$Exp${NC} Days"
 echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
-read -p " Select menu : " opt
-echo -e ""
+echo -e "${BIWhite}"
+read -p "   Select menu << 1 - 6 >> : " opt
 case $opt in
 1) clear ; menu-ssh ;;
 2) clear ; menu-vmess ;;
@@ -218,5 +218,5 @@ case $opt in
 6) clear ; menu-set ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
+*) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;
 esac
