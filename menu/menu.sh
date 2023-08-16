@@ -76,7 +76,7 @@ let ssa=$ssx/2
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
-BIYellow='\033[1;93m'     # Yellow
+BIYellow='\033[1;33m'     # Yellow
 BIBlue='\033[1;94m'       # Blue
 BIPurple='\033[1;95m'     # Purple
 BICyan='\033[1;96m'       # Cyan
@@ -184,6 +184,9 @@ else
 resv2r="${red}OFF${NC}"
 fi
 IPVPS=$(curl -s ipinfo.io/ip )
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+clear
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}                     << INFORMASI VPS >>                    \E[0m"  
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
@@ -199,10 +202,10 @@ echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}=${BIYellow} $Exp ${NC}"
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
-echo -e "${CYAN}┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}│  \033[0m ${BOLD}${GREEN}   ${BIYellow} SSH${GREEN}       ${BIYellow}VMESS  ${GREEN}     ${BIYellow}VLESS  ${GREEN}     ${BIYellow}TROJAN${GREEN}     $NC "
-echo -e "${CYAN}│  \033[0m ${Blue}     $ssh1         $vma           $vla           $tra              $NC"
-echo -e "${CYAN}└─────────────────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}    ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "${CYAN}    │  \033[0m ${BOLD}${GREEN}   ${BIYellow} SSH${GREEN}       ${BIYellow}VMESS  ${GREEN}     ${BIYellow}VLESS  ${GREEN}     ${BIYellow}TROJAN${GREEN}     $NC "
+echo -e "${CYAN}    │  \033[0m ${Blue}     $ssh1         $vma           $vla           $tra              $NC"
+echo -e "${CYAN}    └─────────────────────────────────────────────────────┘${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow}                       << MENU TUNNELING >>                    \E[0m"    
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
@@ -210,10 +213,10 @@ echo -e "   ${CYAN}[${LIGHT}01${CYAN}]${LIGHT}•${NC} ${CYAN}SSH${NC}        ${
 echo -e "   ${CYAN}[${LIGHT}02${CYAN}]${LIGHT}•${NC} ${CYAN}VMESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}05${CYAN}]${LIGHT}•${NC}${CYAN} TROJAN Ws${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
 echo -e "   ${CYAN}[${LIGHT}03${CYAN}]${LIGHT}•${NC} ${CYAN}VLESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}06${CYAN}]${LIGHT}•${NC}${CYAN} SETTING  ${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}                 << SCRIPT BY FV STORE TUNNELING >>              \E[0m" 
+echo -e "${BIYellow}              << SCRIPT BY FV STORE TUNNELING >>              \E[0m" 
 echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
-echo -e "${BIWhite}"
-read -p "   Select menu << 1 - 6 >> : " opt
+echo -e "${LIGHT}"
+read -p "     Select menu << 1 - 6 >> : " opt
 case $opt in
 1) clear ; menu-ssh ;;
 2) clear ; menu-vmess ;;
