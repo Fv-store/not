@@ -14,7 +14,6 @@
     fi
     done
     rm -f /root/tmp
-}
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep $MYIP | awk '{print $2}')
@@ -31,7 +30,6 @@ else
 res="Permission Accepted..."
 fi
 }
-
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
     IZIN=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | awk '{print $4}' | grep $MYIP)
