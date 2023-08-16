@@ -187,9 +187,12 @@ clear
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Server Informations${NC}"
 echo -e "${BICyan} │"
-echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}$Name${NC}"
-echo -e " ${BICyan}│  ${BICyan}Current Domain  :  ${BIPurple}$(cat /etc/xray/domain)${NC}"
-echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
+echo -e " ${BICyan}│  ${BICyan}Server Uptume    = ${BIPurple}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
+echo -e " ${BICyan}│  ${BICyan}Current Time     = ${BIPurple}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
+echo -e " ${BICyan}│  ${BICyan}Operating System = ${BIPurple}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
+echo -e " ${BICyan}│  ${BICyan}Creator Script   = ${BIPurple}$Name${NC}"
+echo -e " ${BICyan}│  ${BICyan}Current Domain   = ${BIPurple}$(cat /etc/xray/domain)${NC}"
+echo -e " ${BICyan}│  ${BICyan}IP-VPS           = ${BIYellow}$IPVPS${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
@@ -203,8 +206,8 @@ echo -e " ${BICyan}│  ${BICyan}[${BIWhite}02${BICyan}] VMESS ${BICyan}[${BIYel
 echo -e " ${BICyan}│  ${BICyan}[${BIWhite}03${BICyan}] VLESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""      ${BICyan}[${BIWhite}06${BICyan}] SETTINGS  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  Version      ${NC} : Ver3. Last Update"
-echo -e " ${BICyan}│  User       ${NC}   :\033[1;36m $Name \e[0m"
+echo -e " ${BICyan}│  Version      ${NC} : 2.0 Last Version"
+echo -e " ${BICyan}│  User         ${NC} :\033[1;36m $Name \e[0m"
 echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$Exp${NC} Days"
 echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
 echo -e "${BIWhite}"
@@ -218,5 +221,5 @@ case $opt in
 6) clear ; menu-set ;;
 0) clear ; menu ;;
 x) exit ;;
-*) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; menu ;;
+*) echo -e "" ; echo "Menu Yg Ada Pilih Tidak Valid" ; sleep 2 ; menu ;;
 esac
