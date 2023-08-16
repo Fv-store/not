@@ -2,7 +2,7 @@
 # Script By FV STORE
 # ====================================
 # Color
-BICyan='\033[1;96m'       # Cyan
+BICyan='\033[1;96m'
 DF='\e[39m'
 Bold='\e[1m'
 Blink='\e[5m'
@@ -33,24 +33,24 @@ figlet 'FV STORE' | lolcat
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}" 
 echo -e "\E[44;1;39m               ✯ MENU SETTINGS ✯              \E[0m" 
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}" 
-echo -e "${BICyan}┌────────────────────────────────────────────┐${NC}"
-echo -e "${CYAN}  [${NC}""\e[97m01\e[0m""${CYAN}]${NC}""\e[96m Ganti Domain VPS\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m02\e[0m""${CYAN}]${NC}""\e[96m Ganti Banner VPS\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m03\e[0m""${CYAN}]${NC}""\e[96m Ganti Password VPS\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m04\e[0m""${CYAN}]${NC}""\e[96m Ganti Port\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m05\e[0m""${CYAN}]${NC}""\e[96m About Script\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m06\e[0m""${CYAN}]${NC}""\e[96m Setting Auto Reboot\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m07\e[0m""${CYAN}]${NC}""\e[96m Restart All Service\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m08\e[0m""${CYAN}]${NC}""\e[96m Speedtest VPS\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m09\e[0m""${CYAN}]${NC}""\e[96m Cek Bandwith\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m10\e[0m""${CYAN}]${NC}""\e[96m Webmin Menu\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m11\e[0m""${CYAN}]${NC}""\e[96m Status Service\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Cache\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m" 
-echo -e "${CYAN}  [${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
-echo -e "${CYAN}  [${NC}""\e[97m15\e[0m""${CYAN}]${NC}""\e[96m Menu Bot\e[0m"
-echo -e "${CYAN}  [${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\e[93m Keluar dari menu settings\e[0m" 
-echo -e "${BICyan}└────────────────────────────────────────────┘${NC}"
+echo -e "${BICyan}┌─────────────────────────────────────────┐${NC}"
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m01\e[0m""${CYAN}]${NC}""\e[96m Ganti Domain VPS\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m02\e[0m""${CYAN}]${NC}""\e[96m Ganti Banner VPS\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m03\e[0m""${CYAN}]${NC}""\e[96m Ganti Password VPS\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m04\e[0m""${CYAN}]${NC}""\e[96m Ganti Port\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m05\e[0m""${CYAN}]${NC}""\e[96m About Script\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m06\e[0m""${CYAN}]${NC}""\e[96m Setting Auto Reboot\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m07\e[0m""${CYAN}]${NC}""\e[96m Restart All Service\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m08\e[0m""${CYAN}]${NC}""\e[96m Speedtest VPS\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m09\e[0m""${CYAN}]${NC}""\e[96m Cek Bandwith\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m10\e[0m""${CYAN}]${NC}""\e[96m Webmin Menu\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m11\e[0m""${CYAN}]${NC}""\e[96m Status Service\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Cache\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m" 
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m15\e[0m""${CYAN}]${NC}""\e[96m Menu Bot\e[0m"
+echo -e "${BICyan}│${CYAN}  [${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\e[33m Keluar dari menu settings\e[0m" 
+echo -e "${BICyan}└─────────────────────────────────────────┘${NC}"
 echo -e "${LWHITE}"
 read -p "Select Menu  << 1 - 13 >> : " opt
 case $opt in
@@ -71,5 +71,5 @@ case $opt in
 15) clear ; wget ${BOT} && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 
 00 | 0) clear ; menu ; exit ;;
-*) echo -e "" ; echo "Menu yg anda pilih tidak tersedia" ; sleep 1 ; menu-set ;;
+*) echo -e "" ; echo "Menu yg anda pilih tidak Valid" ; sleep 1 ; menu-set ;;
 esac 
