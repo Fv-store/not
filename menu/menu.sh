@@ -71,7 +71,6 @@ let tra=$trx/2
 ssx=$(grep -c -E "^## " "/etc/xray/config.json")
 let ssa=$ssx/2
 
-UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 # // Exporting Language to UTF-8
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
@@ -205,11 +204,11 @@ echo -e " ${BICyan}│  ${BICyan}[${BIWhite}01${BICyan}] SSH   ${BICyan}[${BIYel
 echo -e " ${BICyan}│  ${BICyan}[${BIWhite}02${BICyan}] VMESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""      ${BICyan}[${BIWhite}05${BICyan}] TROJAN WS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
 echo -e " ${BICyan}│  ${BICyan}[${BIWhite}03${BICyan}] VLESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""      ${BICyan}[${BIWhite}06${BICyan}] SETTINGS  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
-echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  Version      ${NC} : 2.0 Last Version"
-echo -e " ${BICyan}│  User         ${NC} :\033[1;36m $Name \e[0m"
-echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$Exp${NC} Days"
-echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
+echo -e " ${BICyan}     ┌─────────────────────────────────────┐${NC}"
+echo -e " ${BICyan}     │  Version      ${NC} : 2.0 Last Version"
+echo -e " ${BICyan}     │  User         ${NC} :\033[1;36m $Name \e[0m"
+echo -e " ${BICyan}     │  Expiry script${NC} : ${BIYellow}$Exp${NC} Days"
+echo -e " ${BICyan}     └─────────────────────────────────────┘${NC}"
 echo -e "${BIWhite}"
 read -p "   Select menu << 1 - 6 >> : " opt
 case $opt in
