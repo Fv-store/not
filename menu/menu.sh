@@ -72,6 +72,7 @@ ssx=$(grep -c -E "^## " "/etc/xray/config.json")
 let ssa=$ssx/2
 
 # // Exporting Language to UTF-8
+
 BIBlack='\033[1;90m'      # Black
 BIRed='\033[1;91m'        # Red
 BIGreen='\033[1;92m'      # Green
@@ -79,7 +80,8 @@ BIYellow='\033[1;93m'     # Yellow
 BIBlue='\033[1;94m'       # Blue
 BIPurple='\033[1;95m'     # Purple
 BICyan='\033[1;96m'       # Cyan
-BIWhite='\033[1;97m'      # White
+CYAN='\033[1;96m'       # Cyan
+LIGHT='\033[1;97m'      # White
 UWhite='\033[4;37m'       # White
 On_IPurple='\033[0;105m'  #
 On_IRed='\033[0;101m'
@@ -182,33 +184,34 @@ else
 resv2r="${red}OFF${NC}"
 fi
 IPVPS=$(curl -s ipinfo.io/ip )
-clear
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}${UWhite}Server Informations${NC}"
-echo -e "${BICyan} │"
-echo -e " ${BICyan}│  ${BICyan}Server Uptume    = ${BIPurple}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
-echo -e " ${BICyan}│  ${BICyan}Current Time     = ${BIPurple}$( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
-echo -e " ${BICyan}│  ${BICyan}Operating System = ${BIPurple}$( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g' ) ( $( uname -m) )${NC}"
-echo -e " ${BICyan}│  ${BICyan}Creator Script   = ${BIPurple}$Name${NC}"
-echo -e " ${BICyan}│  ${BICyan}Current Domain   = ${BIPurple}$(cat /etc/xray/domain)${NC}"
-echo -e " ${BICyan}│  ${BICyan}IP-VPS           = ${BIYellow}$IPVPS${NC}"
-echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "                     << INFORMASI VPS >>                    \E[0m" | lolcat    
+echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "  ${LIGHT}• ${CYAN}Server Uptime       ${NC}=${BIGreen} $( uptime -p  | cut -d " " -f 2-10000 ) "
+echo -e "  ${LIGHT}• ${CYAN}Current Time        ${NC}=${BIGreen} $( date -d "0 days" +"%d-%m-%Y | %X" )"
+echo -e "  ${LIGHT}• ${CYAN}Operating System    ${NC}=${BIGreen} $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g')( $(uname -m))"
+echo -e "  ${LIGHT}• ${CYAN}Current Domain      ${NC}=${BIGreen} $( cat /etc/xray/domain )"
+echo -e "  ${LIGHT}• ${CYAN}Server IP           ${NC}=${BIGreen} ${IPVPS}"
+echo -e "  ${LIGHT}• ${CYAN}ISP-VPS             ${NC}=${BIGreen} ${ISP}"
+echo -e "  ${LIGHT}• ${CYAN}City                ${NC}=${BIGreen} ${CITY}"
+echo -e "  ${LIGHT}• ${CYAN}Clients Name        ${NC}=${BIYellow} $Name ${NC}"
+echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}=${BIYellow} $Exp ${NC}"
+echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │  \033[0m ${BOLD}${GREEN}   ${BIYellow} SSH${GREEN}       ${BIYellow}VMESS  ${GREEN}     ${BIYellow}VLESS  ${GREEN}     ${BIYellow}TROJAN${GREEN}     $NC "
-echo -e "${BICyan} │  \033[0m ${Blue}     $ssh1         $vma           $vla           $tra              $NC"
-echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
-echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  ${BICyan}[${BIWhite}01${BICyan}] SSH   ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""      ${BICyan}[${BIWhite}04${BICyan}] TROJAN GO ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
-echo -e " ${BICyan}│  ${BICyan}[${BIWhite}02${BICyan}] VMESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""      ${BICyan}[${BIWhite}05${BICyan}] TROJAN WS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
-echo -e " ${BICyan}│  ${BICyan}[${BIWhite}03${BICyan}] VLESS ${BICyan}[${BIYellow}Menu${BICyan}]${NC}""      ${BICyan}[${BIWhite}06${BICyan}] SETTINGS  ${BICyan}[${BIYellow}Menu${BICyan}]${NC}" "${BICyan}      │"
-echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
-echo -e " ${BICyan}     ┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}     │  Version      ${NC} : 2.0 Last Version"
-echo -e " ${BICyan}     │  User         ${NC} :\033[1;36m $Name \e[0m"
-echo -e " ${BICyan}     │  Expiry script${NC} : ${BIYellow}$Exp${NC} Days"
-echo -e " ${BICyan}     └─────────────────────────────────────┘${NC}"
+echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "${CYAN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN       SHADOWSOCKS$NC  ${CYAN}│"
+echo -e "${CYAN}│  \033[0m ${LIGHT} $ssh1        $vma           $vla          $tra               $ssa   $NC   ${CYAN} │"
+echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "                       << MENU TUNNELING >>                    \E[0m" | lolcat    
+echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "   ${CYAN}[${LIGHT}01${CYAN}]${LIGHT}•${NC} ${CYAN}SSH${NC}        ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}04${CYAN}]${LIGHT}•${NC}${CYAN} TROJAN Go${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
+echo -e "   ${CYAN}[${LIGHT}02${CYAN}]${LIGHT}•${NC} ${CYAN}VMESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}05${CYAN}]${LIGHT}•${NC}${CYAN} TROJAN Ws${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
+echo -e "   ${CYAN}[${LIGHT}03${CYAN}]${LIGHT}•${NC} ${CYAN}VLESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}06${CYAN}]${LIGHT}•${NC}${CYAN} SETTING  ${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
+echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
+echo -e "                 << SCRIPT BY FV STORE TUNNELING >>              \E[0m" | lolcat
+echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
 echo -e "${BIWhite}"
 read -p "   Select menu << 1 - 6 >> : " opt
 case $opt in
