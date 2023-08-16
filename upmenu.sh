@@ -2,22 +2,45 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
+# // Color Valid
+BIBlack='\033[1;90m'      # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+UWhite='\033[4;37m'       # White
+On_IPurple='\033[0;105m'  #
+On_IRed='\033[0;101m'
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+NC='\033[0m'
+# ============================================
 clear
 echo -e " [ INFO ] Downloading Update File Dalam 3s...."
+clear
+sleep 1
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite}1s.${NC}"
+clear
+sleep 1
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite}2s..${NC}"
+clear
+sleep 1
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite}3s...${NC}"
+clear
+sleep 2
+# vmess
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite} INSTALING X-RAY VMESS...${NC}"
 sleep 1
 echo ""
-echo -e "1s..."
-clear
-sleep 1
-echo -e "2s..."
-clear
-sleep 1
-echo -e "3s..."
-sleep 2
-clear
-# vmess
-echo -e "Installing Xray Vmess..."
-sleep 1
 cd /usr/bin/
 wget -O add-ws "https://raw.githubusercontent.com/Fv-store/not/main/xray/add-ws.sh" && chmod +x add-ws
 wget -O trialvmess "https://raw.githubusercontent.com/Fv-store/not/main/xray/trialvmess.sh" && chmod +x trialvmess
@@ -26,7 +49,8 @@ wget -O del-ws "https://raw.githubusercontent.com/Fv-store/not/main/xray/del-ws.
 wget -O cek-ws "https://raw.githubusercontent.com/Fv-store/not/main/xray/cek-ws.sh" && chmod +x cek-ws
 clear
 # vless
-echo -e "Installing Xray Vless..."
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite} INSTALING X-RAY VLESS...${NC}"
+echo ""
 sleep 1
 wget -O add-vless "https://raw.githubusercontent.com/Fv-store/not/main/xray/add-vless.sh" && chmod +x add-vless
 wget -O trialvless "https://raw.githubusercontent.com/Fv-store/not/main/xray/trialvless.sh" && chmod +x trialvless
@@ -35,7 +59,8 @@ wget -O del-vless "https://raw.githubusercontent.com/Fv-store/not/main/xray/del-
 wget -O cek-vless "https://raw.githubusercontent.com/Fv-store/not/main/xray/cek-vless.sh" && chmod +x cek-vless
 clear
 # trojan Ws
-echo -e "Installing Xray Trojan Ws..."
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite} INSTALING X-RAY TROJAN WS...${NC}"
+echo ""
 sleep 1
 wget -O add-tr "https://raw.githubusercontent.com/Fv-store/not/main/xray/add-tr.sh" && chmod +x add-tr
 wget -O trial-trojan "https://raw.githubusercontent.com/Fv-store/not/main/xray/trialtrojan.sh" && chmod +x trialtrojan
@@ -44,7 +69,8 @@ wget -O renew-tr "https://raw.githubusercontent.com/Fv-store/not/main/xray/renew
 wget -O cek-tr "https://raw.githubusercontent.com/Fv-store/not/main/xray/cek-tr.sh" && chmod +x cek-tr
 clear
 # trojan go
-echo -e "Installing Xray Trojan Go..."
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite} INSTALING X-RAY TROJAN GO...${NC}"
+echo ""
 sleep 1
 wget -O addtrgo "https://raw.githubusercontent.com/Fv-store/not/main/xray/addtrgo.sh" && chmod +x addtrgo
 wget -O trialtrojango "https://raw.githubusercontent.com/Fv-store/not/main/xray/trialtrojango.sh" && chmod +x trialtrojango
@@ -53,7 +79,8 @@ wget -O renewtrgo "https://raw.githubusercontent.com/Fv-store/not/main/xray/rene
 wget -O cektrgo "https://raw.githubusercontent.com/Fv-store/not/main/xray/cektrgo.sh" && chmod +x cektrgo
 clear
 # menu
-echo -e "Installing Menu..."
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite} INSTALLING MENU...${NC}"
+echo ""
 sleep 1
 wget -O menu "https://raw.githubusercontent.com/Fv-store/not/main/menu/menu.sh" && chmod +x menu
 wget -O menu-vmess "https://raw.githubusercontent.com/Fv-store/not/main/menu/menu-vmess.sh" && chmod +x menu-vmess
@@ -64,7 +91,8 @@ wget -O menu-trgo "https://raw.githubusercontent.com/Fv-store/not/main/menu/menu
 wget -O menu-trojan "https://raw.githubusercontent.com/Fv-store/not/main/menu/menu-trojan.sh" && chmod +x trojan
 clear
 # menu ssh ovpn
-echo -e "Installing Ssh & Ovpn..."
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite} INSTALING SSH OVPN...${NC}"
+echo ""
 sleep 1
 wget -O menu-ssh "https://raw.githubusercontent.com/Fv-store/not/main/menu/menu-ssh.sh" && chmod +x menu-ssh
 wget -O usernew "https://raw.githubusercontent.com/Fv-store/not/main/ssh/usernew.sh" && chmod +x usernew
@@ -79,7 +107,8 @@ wget -O ceklim "https://raw.githubusercontent.com/Fv-store/not/main/ssh/ceklim.s
 wget -O tendang "https://raw.githubusercontent.com/Fv-store/not/main/ssh/tendang.sh" && chmod +x tendang
 clear
 # menu system
-echo -e "Installing Menu System..."
+echo -e "${BICyan}[${NC}""${BIYellow}Notes${NC}""${BICyan}]${NC}""${BIWhite} INSTALING SYSTEM...${NC}"
+echo ""
 sleep 1
 wget -O menu-set "https://raw.githubusercontent.com/Fv-store/not/main/menu/menu-set.sh" && chmod +x menu-set
 wget -O menu-domain "https://raw.githubusercontent.com/Fv-store/not/main/menu/menu-domain.sh" && chmod +x menu-domain
@@ -109,4 +138,6 @@ echo ""
 sleep 1
 clear
 echo -e "3..."
+sleep 2
+clear
 menu
