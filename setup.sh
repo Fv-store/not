@@ -75,7 +75,8 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${tyblue}NOTES${NC} ] After rebooting"
   sleep 1
   echo -e "[ ${tyblue}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${tyblue}NOTES${NC} ] if you understand then tap enter now"
+  sleep 1
+  echo -e "[ ${tyblue}NOTES${NC} ] Lu Ngerti Kgak Ngerti Klik Enter"
   read
 else
   echo -e "[ ${green}INFO${NC} ] Oke installed"
@@ -149,8 +150,8 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green      Install SSH / WS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-clear
 wget https://raw.githubusercontent.com/Fv-store/not/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+clear
 ### Pasang Rclone
 function pasang_backup() {
     judge "Memasang backup server"
@@ -163,7 +164,6 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$green          Install XRAY              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-clear
 wget https://raw.githubusercontent.com/Fv-store/not/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/Fv-store/not/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
@@ -203,7 +203,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ Sc Mod By FV STORES ]-===================="
+echo "=====================-[ Sc By FV STORE ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -243,7 +243,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Sc Mod By FV STORES ]-==============="
+echo "===============-[ Sc By FV STORE ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
@@ -253,5 +253,5 @@ rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
-read -n 1 -s -r -p "Press any key to reboot"
+read -n 1 -s -r -p "Klik Enter Untuk Reboot"
 reboot
