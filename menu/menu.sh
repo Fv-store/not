@@ -57,7 +57,7 @@ Exp=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep
 fi
 ####
 MYIP=$(curl -sS ipv4.icanhazip.com)
-echo "Script By FV STORES"
+echo ""
 #########################
 # =========================================
 vlx=$(grep -c -E "^#& " "/etc/xray/config.json")
@@ -187,6 +187,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 clear
+figlet "MY FV STORE" | lolcat
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -200,24 +201,24 @@ echo -e "  ${LIGHT}• ${CYAN}City                ${NC}=${BIGreen} ${CITY}"
 echo -e "  ${LIGHT}• ${CYAN}Clients Name        ${NC}=${BIYellow} $Name ${NC}"
 echo -e "  ${LIGHT}• ${CYAN}Script Expired      ${NC}=${BIYellow} $Exp ${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                    \E[0m"
+echo -e "\E[44;1;39m                     ⇱ STATUS LAYANAN ⇲                       \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "   ${BICyan}     STUNNEL ${NC}: $resst" "${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
-echo ""
-echo -e "${GREEN}   ${BIYellow} SSH${GREEN}       ${BIYellow}VMESS  ${GREEN}     ${BIYellow}VLESS  ${GREEN}     ${BIYellow}TROJAN${GREEN}     $NC "
-echo -e "${Blue}     $ssh1         $vma           $vla           $tra              $NC"
+echo -e "                             "
+echo -e "${BIYellow}   SSH       ${BIYellow}VMESS       ${BIYellow}VLESS       ${BIYellow}TROJAN     $NC "
+echo -e "${Blue}        $ssh1         $vma           $vla           $tra              $NC"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ INFORMASI LAYANAN ⇲                    \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "   ${CYAN}[${LIGHT}01${CYAN}]${LIGHT}•${NC} ${CYAN}SSH${NC}        ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}04${CYAN}]${LIGHT}•${NC}${CYAN} TROJAN Go${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
-echo -e "   ${CYAN}[${LIGHT}02${CYAN}]${LIGHT}•${NC} ${CYAN}VMESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}05${CYAN}]${LIGHT}•${NC}${CYAN} TROJAN Ws${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
-echo -e "   ${CYAN}[${LIGHT}03${CYAN}]${LIGHT}•${NC} ${CYAN}VLESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}06${CYAN}]${LIGHT}•${NC}${CYAN} SETTING  ${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
+echo -e "   ${CYAN}[${LIGHT}01${CYAN}]${LIGHT}•${NC} ${CYAN}SSH${NC}        ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}04${CYAN}]${LIGHT}•${NC} ${CYAN} TROJAN Go${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
+echo -e "   ${CYAN}[${LIGHT}02${CYAN}]${LIGHT}•${NC} ${CYAN}VMESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}05${CYAN}]${LIGHT}•${NC} ${CYAN} TROJAN Ws${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
+echo -e "   ${CYAN}[${LIGHT}03${CYAN}]${LIGHT}•${NC} ${CYAN}VLESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}06${CYAN}]${LIGHT}•${NC} ${CYAN} SETTING  ${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                    ⇱ SCRIPT BY FV STORE ⇲                    \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${LIGHT}"
-read -p "     Select menu << 1 - 6 >> : " opt
+read -p "Select menu << 1 - 6 >> : " opt
 case $opt in
 1) clear ; menu-ssh ;;
 2) clear ; menu-vmess ;;
