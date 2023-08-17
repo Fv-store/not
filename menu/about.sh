@@ -1,19 +1,18 @@
 #!/bin/bash
+# FV STORE
+# ━━━━━━━━━━━━━━━━━━━━━━━━━
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-
 clear
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[0;100;33m       • AutoScript by FV STORE •            \e[0m"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\e[97         Buy Auto Script Tunneling : 08316009834"
-echo ""
 echo -e "\e[97   >>> Service & Port"
 echo -e "\e[97   - OpenSSH            : 22"
 echo -e "\e[97   - SSH Websocket      : 80"
 echo -e "\e[97   - SSH SSL Websocket  : 443"
 echo -e "\e[97   - Stunnel4           : 447, 777"
 echo -e "\e[97   - Dropbear           : 109, 143"
+echo -e "\e[97   - UDP custom         : 1-65535
 echo -e "\e[97   - Badvpn             : 7100-7300"
 echo -e "\e[97   - Nginx              : 81"
 echo -e "\e[97   - Vmess TLS          : 443"
@@ -32,5 +31,5 @@ echo -e "\e[97   - Auto-Reboot        : [ON]"
 echo -e "\e[97   - IPv6               : [OFF]"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
-read -n 1 -s -r -p "Klik apa saja untuk kembali ke menu"
+read -p "Klik enter untuk kembali ke menu"
 menu-set
