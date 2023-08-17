@@ -187,9 +187,9 @@ IPVPS=$(curl -s ipinfo.io/ip )
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
 clear
-echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}                     << INFORMASI VPS >>                    \E[0m"  
-echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "  ${LIGHT}• ${CYAN}Server Uptime       ${NC}=${BIGreen} $( uptime -p  | cut -d " " -f 2-10000 ) "
 echo -e "  ${LIGHT}• ${CYAN}Current Time        ${NC}=${BIGreen} $( date -d "0 days" +"%d-%m-%Y | %X" )"
 echo -e "  ${LIGHT}• ${CYAN}Operating System    ${NC}=${BIGreen} $( cat /etc/os-release | grep -w PRETTY_NAME | sed 's/PRETTY_NAME//g' | sed 's/=//g' | sed 's/"//g')( $(uname -m))"
@@ -206,15 +206,15 @@ echo -e "   ${CYAN}┌───────────────────�
 echo -e "   ${CYAN}│  \033[0m ${BOLD}${GREEN}   ${BIYellow} SSH${GREEN}       ${BIYellow}VMESS  ${GREEN}     ${BIYellow}VLESS  ${GREEN}     ${BIYellow}TROJAN${GREEN}     $NC "
 echo -e "   ${CYAN}│  \033[0m ${Blue}     $ssh1         $vma           $vla           $tra              $NC"
 echo -e "   ${CYAN}└─────────────────────────────────────────────────────┘${NC}"
-echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}                       << MENU TUNNELING >>                    \E[0m"    
-echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ INFORMASI LAYANAN ⇲                    \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "   ${CYAN}[${LIGHT}01${CYAN}]${LIGHT}•${NC} ${CYAN}SSH${NC}        ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}04${CYAN}]${LIGHT}•${NC}${CYAN} TROJAN Go${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
 echo -e "   ${CYAN}[${LIGHT}02${CYAN}]${LIGHT}•${NC} ${CYAN}VMESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}05${CYAN}]${LIGHT}•${NC}${CYAN} TROJAN Ws${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
 echo -e "   ${CYAN}[${LIGHT}03${CYAN}]${LIGHT}•${NC} ${CYAN}VLESS${NC}      ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}         ${CYAN}[${LIGHT}06${CYAN}]${LIGHT}•${NC}${CYAN} SETTING  ${NC}    ${CYAN}[${NC}${BIYellow}MENU${NC}${CYAN}]${NC}"
-echo -e "${CYAN}┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow}                     << SCRIPT BY FV STORE >>                  \E[0m" 
-echo -e "${CYAN}└────────────────────────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                    ⇱ SCRIPT BY FV STORE ⇲                    \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${LIGHT}"
 read -p "     Select menu << 1 - 6 >> : " opt
 case $opt in
