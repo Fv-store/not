@@ -24,34 +24,36 @@ GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
 # =====================================
+# Install udp
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
+# Update menu
 UPDATE="https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh"
 BOT="https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh"
-# ====================================
 clear 
-echo -e "${BCY}┌─────────────────────────────────────────┐${NC}" 
-echo -e "\E[44;0;37m             ✯ MENU SETTINGS ✯            \E[0m" 
-echo -e "${BCY}└─────────────────────────────────────────┘${NC}"
-echo -e "${BCY}┌─────────────────────────────────────────┐${NC}"
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m01\e[0m""${CYAN}]${NC}""\e[96m Ganti Domain VPS\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m02\e[0m""${CYAN}]${NC}""\e[96m Ganti Banner VPS\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m03\e[0m""${CYAN}]${NC}""\e[96m Ganti Password VPS\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m04\e[0m""${CYAN}]${NC}""\e[96m Ganti Port\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m05\e[0m""${CYAN}]${NC}""\e[96m About Script\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m06\e[0m""${CYAN}]${NC}""\e[96m Setting Auto Reboot\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m07\e[0m""${CYAN}]${NC}""\e[96m Restart All Service\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m08\e[0m""${CYAN}]${NC}""\e[96m Speedtest VPS\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m09\e[0m""${CYAN}]${NC}""\e[96m Cek Bandwith\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m10\e[0m""${CYAN}]${NC}""\e[96m Webmin Menu\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m11\e[0m""${CYAN}]${NC}""\e[96m Status Service\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Cache\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m" 
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m15\e[0m""${CYAN}]${NC}""\e[96m Menu Bot\e[0m"
-echo -e "${BCY}│${CYAN}  [${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\033[1;33m Keluar dari menu settings\e[0m" 
-echo -e "${BCY}└─────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ MENU TAMBAHAN ⇲                        \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "${CYAN}  [${NC}""\e[97m01\e[0m""${CYAN}]${NC}""\e[96m Ganti Domain VPS\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m02\e[0m""${CYAN}]${NC}""\e[96m Ganti Banner VPS\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m03\e[0m""${CYAN}]${NC}""\e[96m Ganti Password VPS\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m04\e[0m""${CYAN}]${NC}""\e[96m Ganti Port\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m05\e[0m""${CYAN}]${NC}""\e[96m About Script\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m06\e[0m""${CYAN}]${NC}""\e[96m Setting Auto Reboot\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m07\e[0m""${CYAN}]${NC}""\e[96m Restart All Service\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m08\e[0m""${CYAN}]${NC}""\e[96m Speedtest VPS\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m09\e[0m""${CYAN}]${NC}""\e[96m Cek Bandwith\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m10\e[0m""${CYAN}]${NC}""\e[96m Webmin Menu\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m11\e[0m""${CYAN}]${NC}""\e[96m Status Service\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m12\e[0m""${CYAN}]${NC}""\e[96m Clear Cache\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m13\e[0m""${CYAN}]${NC}""\e[96m Update Auto Script\e[0m" 
+echo -e "${CYAN}  [${NC}""\e[97m14\e[0m""${CYAN}]${NC}""\e[96m Install Udp\e[0m"
+echo -e "${CYAN}  [${NC}""\e[97m15\e[0m""${CYAN}]${NC}""\e[96m Menu Bot\e[0m"
+echo -e "${CYAN}  [${NC}""\e[97m00\e[0m""${CYAN}]${NC}""\033[1;33m Keluar dari menu Tambahan\e[0m" 
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[44;1;39m                     ⇱ SCRIPT BY FV STORE ⇲                    \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${LWHITE}"
-read -p "Select Menu  << 1 - 13 >> : " opt
+read -p "Select Menu  << 1 - 15 >> : " opt
 case $opt in
 01 | 1) clear ; menu-domain ; exit ;;
 02 | 2) clear ; nano /etc/issue.net ; exit ;; #ssh-vpn banner.conf
