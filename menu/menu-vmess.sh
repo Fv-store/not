@@ -80,17 +80,18 @@ fi
 ####
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-echo -e "${CY}┌──────────────────────────────────────────────┐${NC}"
-echo -e "${CY}│${WHI}          << VMESS MANAGER >>              ${NC}"
-echo -e "${CY}└──────────────────────────────────────────────┘${NC}"
-echo -e "${CY}┌──────────────────────────────────────────────┐${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}1${NC}]${CYAN}]${NC}${CY} Create Vmess Account ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}2${NC}]${CYAN}]${NC}${CY} Trial Vmess Account ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}3${NC}]${CYAN}]${NC}${CY} Renew Vmess Account ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}4${NC}]${CYAN}]${NC}${CY} Delete Vmess Account ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${CYAN}]${NC}${CY} Check User Login Vmess ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${YEL} Kembali ke menu ${NC}"
-echo -e "${CY}└──────────────────────────────────────────────┘${NC}"
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${WHI}   << VMESS MANAGER >>  ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
+echo ""
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}1${NC}]${NC}${CY} Create Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}2${NC}]${NC}${CY} Trial Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}3${NC}]${NC}${CY} Renew Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}4${NC}]${NC}${CY} Delete Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${NC}${CY} Check User Login Vmess ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${NC}${YEL} Kembali ke menu ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
 echo -e "${WHI}"
 read -p "    Select menu << 1 - 5 >> : "  opt
 case $opt in
