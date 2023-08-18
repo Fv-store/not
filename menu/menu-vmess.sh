@@ -82,7 +82,7 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e "${CY}┌──────────────────────────────┐${NC}"
-echo -e "${CY}│${WHI}   << VMESS MANAGER >>  ${NC}"
+echo -e "${CY}│${WHI}         << VMESS MANAGER >>  ${NC}"
 echo -e "${CY}└──────────────────────────────┘${NC}"
 echo ""
 echo -e "${CY}┌──────────────────────────────┐${NC}"
@@ -94,7 +94,7 @@ echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${NC}${CY} Check User Login Vmess ${
 echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${NC}${BIYellow} Kembali ke menu  ${NC}"
 echo -e "${CY}└──────────────────────────────┘${NC}"
 echo -e "${WHI}"
-read -p "    Select menu << 1 - 5 >> : "  opt
+read -p "  Select menu << 1 - 5 >> : "  opt
 case $opt in
 1) clear ; add-ws ; exit ;;
 2) clear ; trialvmess ; exit ;;
