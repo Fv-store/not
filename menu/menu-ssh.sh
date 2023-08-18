@@ -80,30 +80,25 @@ Exp=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep
 fi
 ######################
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-
 clear
-echo -e "${CY}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
-echo -e "\e[97m               ✯ MENU SSH MANAGER ✯              \E[0m"
-echo -e "${CY}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
-echo -e ""
-echo -e "${CY}┌──────────────────────────────────────────────┐\033[0m${NC}"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m1\e[0m""${CYAN}]${NC}""\e[93m Create SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m2\e[0m""${CYAN}]${NC}""\e[93m Trial SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m3\e[0m""${CYAN}]${NC}""\e[93m Renew SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m4\e[0m""${CYAN}]${NC}""\e[93m Delete SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m5\e[0m""${CYAN}]${NC}""\e[93m Check User Login SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m6\e[0m""${CYAN}]${NC}""\e[93m List Memeber SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m7\e[0m""${CYAN}]${NC}""\e[93m Delete User Expired SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m8\e[0m""${CYAN}]${NC}""\e[93m Setting AutoKill SSH Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m9\e[0m""${CYAN}]${NC}""\e[93m Check User Multi login SSH Account \e[0m"
-echo -e "${CY}│${NC}"" [\e[93m0\e[0m] \e[31mKembali ke menu\033[0m"
-echo -e "${CY}└──────────────────────────────────────────────┘\033[0m${NC}"
-echo -e   "Press x or [ Ctrl+C ] • To-Exit"
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${WHI}         << SSH MANAGER >>  ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
 echo ""
-echo ""
-read -p " Select menu :  "  opt
-echo -e ""
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}1${NC}]${NC}${CY} Create SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}2${NC}]${NC}${CY} Trial SSH Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}3${NC}]${NC}${CY} Renew SSH Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}4${NC}]${NC}${CY} Delete SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${NC}${CY} Check User Login SSH Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}6${NC}]${NC}${CY} Member SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}7${NC}]${NC}${CY} Delete User Expired SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}8${NC}]${NC}${CY} Setting AutoKill SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}9${NC}]${NC}${CY} Check User Multi login SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${NC}${BIYellow} Kembali ke menu  ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
+echo -e "${WHI}"
+read -p " Select menu << 1 - 9 >> : "  opt
 case $opt in
 1) clear ; usernew ; exit ;;
 2) clear ; trial ; exit ;;
