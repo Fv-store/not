@@ -28,7 +28,7 @@ LIGHT='\033[0;37m'
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 # Update menu
 UPDATE="https://raw.githubusercontent.com/Fv-store/not/main/upmenu.sh"
-BOT="https://raw.githubusercontent.com/dragon-andy/xolpanel/master/xolpanel.sh"
+BOT="https://raw.githubusercontent.com/zheevpn/panel/main/"
 clear 
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[44;1;39m                     ⇱ MENU TAMBAHAN ⇲                        \E[0m"
@@ -69,7 +69,7 @@ case $opt in
 12) clear ; clearcache ;;
 13) clear ; wget -O /usr/bin/upmenu "${UPDATE}" && chmod +x /usr/bin/upmenu && upmenu ;;
 14) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
-15) clear ; wget ${BOT} && chmod +x xolpanel.sh && ./xolpanel.sh ;;
+15) clear ; wget ${BOT}xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 
 00 | 0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Menu yg anda pilih tidak Valid" ; sleep 1 ; menu-set ;;
