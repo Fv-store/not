@@ -82,7 +82,7 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e "${CY}┌──────────────────────────────┐${NC}"
-echo -e "${CY}│${WHI}         << VMESS MANAGER >>  ${NC}"
+echo -e "${CY}│${WHI}     << VMESS MANAGER >>  ${NC}"
 echo -e "${CY}└──────────────────────────────┘${NC}"
 echo ""
 echo -e "${CY}┌──────────────────────────────┐${NC}"
