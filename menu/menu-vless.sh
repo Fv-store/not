@@ -80,26 +80,21 @@ Exp=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep
 fi
 #####
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-
 clear
-echo -e "${CY}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
-echo -e "\e[97m              ✯ MENU VLESS MANAGER ✯              \E[0m"
-echo -e "${CY}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
-echo -e ""
-echo -e "${CY}┌──────────────────────────────────────────────┐\033[0m${NC}"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m1\e[0m""${CYAN}]${NC}""\e[93m Create Vless Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m2\e[0m""${CYAN}]${NC}""\e[93m Trial Vless Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m3\e[0m""${CYAN}]${NC}""\e[93m Extending Account Vless Active Life\e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m4\e[0m""${CYAN}]${NC}""\e[93m Delete Vless Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m5\e[0m""${CYAN}]${NC}""\e[93m Check User Login Vless \e[0m"
-echo -e "${CY}│${NC}"" [\e[93m0\e[0m] \e[31m Kembali ke menu\033[0m"
-echo -e "${CY}└──────────────────────────────────────────────┘\033[0m${NC}"
-echo -e   "Press x or [ Ctrl+C ] • To-Exit"
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${WHI}         << VLESS MANAGER >>  ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
 echo ""
-echo ""
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}1${NC}]${NC}${CY} Create Vless Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}2${NC}]${NC}${CY} Trial Vless Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}3${NC}]${NC}${CY} Renew Vless Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}4${NC}]${NC}${CY} Delete Vless Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${NC}${CY} Check User Login Vless ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${NC}${BIYellow} Kembali ke menu  ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
+echo -e "${WHI}"
 read -p " Select menu :  "  opt
-echo -e ""
 case $opt in
 1) clear ; add-vless ; exit ;;
 2) clear ; trialvless ; exit ;;
