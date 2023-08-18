@@ -5,7 +5,7 @@
 DF='\e[39m'
 Bold='\e[1m'
 Blink='\e[5m'
-yell='\e[33m'
+YEL='\e[33m'
 red='\e[31m'
 green='\e[32m'
 GREEEN='\e[1;32m'
@@ -16,12 +16,12 @@ Lred='\e[91m'
 CYAN='\e[96m'
 Lgreen='\e[92m'
 YELLOW='\e[93m'
-yl='\e[93m'
-LWHITE='\e[97m'
+WHI='\e[97m'
 NC='\e[0m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
 LIGHT='\033[0;37m'
+BIYellow='\033[1;33m'
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
@@ -82,20 +82,20 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e "${CY}┌──────────────────────────────┐${NC}"
-echo -e "${CY}│${WHI}         << SSH MANAGER >>  ${NC}"
+echo -e "${CY}│${WHI}      << SSH MANAGER >>   ${NC}"
 echo -e "${CY}└──────────────────────────────┘${NC}"
 echo ""
 echo -e "${CY}┌──────────────────────────────┐${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}1${NC}]${NC}${CY} Create SSH Account   ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}2${NC}]${NC}${CY} Trial SSH Account    ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}3${NC}]${NC}${CY} Renew SSH Account    ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}4${NC}]${NC}${CY} Delete SSH Account   ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${NC}${CY} Check User Login SSH Account ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}6${NC}]${NC}${CY} Member SSH Account   ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}7${NC}]${NC}${CY} Delete User Expired SSH Account   ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}8${NC}]${NC}${CY} Setting AutoKill SSH Account   ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}9${NC}]${NC}${CY} Check User Multi login SSH Account   ${NC}"
-echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${NC}${BIYellow} Kembali ke menu  ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}1${CYAN}]${CY} Create SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}2${CYAN}]${CY} Trial SSH Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}3${CYAN}]${CY} Renew SSH Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}4${CYAN}]${CY} Delete SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}5${CYAN}]${CY} Check User Login SSH Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}6${CYAN}]${CY} Member SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}7${CYAN}]${CY} Delete User Expired SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}8${CYAN}]${CY} Setting AutoKill SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}9${CYAN}]${CY} Check User Multi login SSH Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}0${CYAN}]${BIYellow} Kembali ke menu  ${NC}"
 echo -e "${CY}└──────────────────────────────┘${NC}"
 echo -e "${WHI}"
 read -p " Select menu << 1 - 9 >> : "  opt
