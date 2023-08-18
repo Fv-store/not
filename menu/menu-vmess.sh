@@ -5,7 +5,7 @@
 DF='\e[39m'
 Bold='\e[1m'
 Blink='\e[5m'
-yell='\e[33m'
+YEL='\e[33m'
 red='\e[31m'
 green='\e[32m'
 GREEEN='\e[1;32m'
@@ -16,8 +16,7 @@ Lred='\e[91m'
 CYAN='\e[96m'
 Lgreen='\e[92m'
 YELLOW='\e[93m'
-yl='\e[93m'
-LWHITE='\e[97m'
+WHI='\e[97m'
 NC='\e[0m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
@@ -80,26 +79,20 @@ Exp=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep
 fi
 ####
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-
 clear
-echo -e "${CY}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
-echo -e "\e[97m              ✯ MENU VMESS MANAGER ✯              \E[0m"
-echo -e "${CY}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
-echo -e ""
-echo -e "${CY}┌──────────────────────────────────────────────┐\033[0m${NC}"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m1\e[0m""${CYAN}]${NC}""\e[93m Create Vmess Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m2\e[0m""${CYAN}]${NC}""\e[93m Trial Vmess Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m3\e[0m""${CYAN}]${NC}""\e[93m Extending Account Vmess Active Life\e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m4\e[0m""${CYAN}]${NC}""\e[93m Delete Vmess Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m5\e[0m""${CYAN}]${NC}""\e[93m Check User Login Vmess \e[0m"
-echo -e "${CY}│${NC}"" [\e[93m0\e[0m] \e[31m Kembali ke menu\033[0m"
-echo -e "${CY}└──────────────────────────────────────────────┘\033[0m${NC}"
-echo -e   "Press x or [ Ctrl+C ] • To-Exit"
-echo ""
-echo ""
-read -p " Select menu :  "  opt
-echo -e ""
+echo -e "${CY}┌──────────────────────────────────────────────┐${NC}"
+echo -e "${CY}│${WHI}          << VMESS MANAGER >>              ${NC}"
+echo -e "${CY}└──────────────────────────────────────────────┘${NC}"
+echo -e "${CY}┌──────────────────────────────────────────────┐${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}1${NC}]${CYAN}]${NC}${CY} Create Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}2${NC}]${CYAN}]${NC}${CY} Trial Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}3${NC}]${CYAN}]${NC}${CY} Renew Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}4${NC}]${CYAN}]${NC}${CY} Delete Vmess Account ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${CYAN}]${NC}${CY} Check User Login Vmess ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${YEL} Kembali ke menu ${NC}"
+echo -e "${CY}└──────────────────────────────────────────────┘${NC}"
+echo -e "${WHI}"
+read -p "    Select menu << 1 - 5 >> : "  opt
 case $opt in
 1) clear ; add-ws ; exit ;;
 2) clear ; trialvmess ; exit ;;
