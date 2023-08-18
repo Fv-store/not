@@ -81,26 +81,21 @@ Exp=$(curl -sS https://raw.githubusercontent.com/Fv-store/my-ip/main/izin | grep
 fi
 ##################
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-
-clear 
-echo -e "${CY}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\033[0m${NC}"
-echo -e "\e[97m               ✯ MENU TROJAN GO ✯                \E[0m"
-echo -e "${CY}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0m${NC}"
-echo -e ""
-echo -e "${CY}┌──────────────────────────────────────────────┐\033[0m${NC}"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m1\e[0m""${CYAN}]${NC}""\e[93m Create Trojan Go Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m2\e[0m""${CYAN}]${NC}""\e[93m Trial Trojan Go Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m3\e[0m""${CYAN}]${NC}""\e[93m Extending Account Trojan Go Active Life\e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m4\e[0m""${CYAN}]${NC}""\e[93m Delete Trojan Go Account \e[0m"
-echo -e "${CY}│${NC}""${CYAN} [${NC}""\e[97m5\e[0m""${CYAN}]${NC}""\e[93m Check User Login Trojan Go \e[0m"
-echo -e "${CY}│${NC}"" [\e[93m0\e[0m] \e[31mKembali ke menu\033[0m"
-echo -e "${CY}└──────────────────────────────────────────────┘\033[0m${NC}"
-echo -e   "Press x or [ Ctrl+C ] • To-Exit"
+clear
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${WHI}         << TROJAN GO >>  ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
 echo ""
-echo ""
-read -p " Select menu : " opt
-echo -e ""
+echo -e "${CY}┌──────────────────────────────┐${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}1${NC}]${NC}${CY} Create Trojan Go Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}2${NC}]${NC}${CY} Trial Trojan Go Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}3${NC}]${NC}${CY} Renew Trojan Go Account    ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}4${NC}]${NC}${CY} Delete Trojan Go Account   ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}5${NC}]${NC}${CY} Check User Login Trojan Go ${NC}"
+echo -e "${CY}│${NC}${CYAN} [${WHI}0${NC}]${NC}${BIYellow} Kembali ke menu  ${NC}"
+echo -e "${CY}└──────────────────────────────┘${NC}"
+echo -e "${WHI}"
+read -p " Select menu << 1 - 5 >> : " opt
 case $opt in
 1) clear ; addtrgo ;;
 2) clear ; trialtrojango ;;
