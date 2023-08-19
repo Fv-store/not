@@ -1,4 +1,6 @@
 #!/bin/bash
+# SL
+# ==========================================
 # Color
 RED='\033[0;31m'
 NC='\033[0m'
@@ -33,7 +35,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/trojan-go/akun.conf")
 		fi
 	done
 CLIENT_NAME=$(grep -E "^### " "/etc/trojan-go/akun.conf" | cut -d ' ' -f 2-3 | sed -n "${CLIENT_NUMBER}"p)
-created=`date +"%Y-%m-%d" -d"`
 user=$(grep -E "^### " "/etc/trojan-go/akun.conf" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/etc/trojan-go/akun.conf" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 sed -i "/^### $user $exp/d" /etc/trojan-go/akun.conf
@@ -42,10 +43,9 @@ systemctl restart trojan-go.service
 service cron restart
 clear
 echo ""
-echo "==============================="
-echo "   Trojan Go Account Deleted   "
-echo "==============================="
-echo "Username  : $user"
-echo "Expired   : $exp"
-echo "Deleted   : $deleted"
-echo "==============================="
+echo "============================"
+echo "  TrojanGo Account Deleted  "
+echo "============================"
+echo "Username : $user"
+echo "Expired  : $exp"
+echo "============================"
