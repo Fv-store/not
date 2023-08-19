@@ -37,7 +37,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-deleted=`date +"%Y-%m-%d" -d"`
 user=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 sed -i "/^### $user $exp/,/^},{/d" /etc/xray/config.json
@@ -47,9 +46,12 @@ systemctl restart xray.service
 clear
 echo ""
 echo "==============================="
-echo "      Vmess Account Deleted    "
+echo "  Xray/Vmess Account Deleted  "
 echo "==============================="
 echo "Username  : $user"
 echo "Expired   : $exp"
-echo "Deleted   : $deleted"
 echo "==============================="
+echo ""
+read -p "Klik enter untuk kembali ke menu"
+menu-vmess
+fi
