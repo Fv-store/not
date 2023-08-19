@@ -1,5 +1,4 @@
 #!/bin/bash
-# SL
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -61,4 +60,4 @@ echo -e "========================="
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 
-menu
+menu-trgo
